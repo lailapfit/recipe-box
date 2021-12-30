@@ -2,47 +2,23 @@ import "./recipe.css";
 
 function Recipe(props) {
   return (
-    <div id="recipe-wrapper">
-      <div class="inner-recipe">
-        <div class="more-info-btn">
-          <div class="btn-background">
-            <i class="fas fa-ellipsis-h"></i>
-          </div>
+    <div className="card-container">
+      <div className="card u-clearfix">
+        <div className="card-body">
+          <span className="card-number card-circle subtle">{props.i}</span>
+          <span className="card-author subtle">{props.value.author}</span>
+          <h2 className="card-title">{props.value.name}</h2>
+          <span className="card-description subtle">
+            {props.value.description}
+          </span>
+          <div className="card-read">Read</div>
+          <span className="card-tag card-circle subtle">C</span>
         </div>
-
-        <div id="title">
-          <header>
-            Oatmeal Chocolate <br />
-            Chip Cookies
-          </header>
-        </div>
-
-        <div id="details">
-          <div class="Details">
-            <h3>Level</h3>
-            <p>Beginner</p>
-          </div>
-
-          <div class="Details">
-            <h3>Time</h3>
-            <p>35 minutes</p>
-          </div>
-
-          <div class="Details">
-            <h3>Rating</h3>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-          </div>
-        </div>
+        <img src={props.value.imageURL} alt="" className="card-media" />
       </div>
-      <div class="start-btn">
-        <a href="http://codepen.io/DesertDev">
-          Start Cooking <i class="fas fa-long-arrow-alt-right"></i>
-        </a>
-      </div>
+      <div className="card-shadow"></div>
     </div>
   );
 }
+
+export default Recipe;

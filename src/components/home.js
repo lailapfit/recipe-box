@@ -1,6 +1,7 @@
 import React from "react";
 import "./home.css";
 import Search from "./search";
+import RandomizedRecipes from "./randomizedRecipes";
 
 class Home extends React.Component {
   render() {
@@ -11,6 +12,9 @@ class Home extends React.Component {
             <h1>Recipe Box</h1>
           </header>
           <Search />
+        </div>
+        <div className="randomized-recipes-container">
+          <RandomizedRecipes />
         </div>
       </div>
     );
